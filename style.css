@@ -1,0 +1,13 @@
+h1{
+  color:purple;
+  background-color:lightgreen;
+}
+body{
+  background-image:url('http://orig13.deviantart.net/ae40/f/2015/154/e/5/e5d208c78bc996f7f8138eda1241c988-d3bu8bp.jpg');
+  background-size:50px;
+}
+ol{
+	font-size: 30px;
+	color: purple;
+	background-color: lightgreen;
+}
