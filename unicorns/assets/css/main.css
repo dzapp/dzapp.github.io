@@ -3917,3 +3917,30 @@
 			}
 
 		}
+
+		.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75%;
+    width: 75%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: -1;
+}
+.hero-vid {
+	width: 50%;
+}
+
+ /* .hero-vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+ /*   min-width: 100%;
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    z-index: 0;
+   /* background: url("../../images/earth.png") no-repeat; 
+    background-size: cover;
+    display: none; */
