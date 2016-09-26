@@ -2681,6 +2681,19 @@
 					width: 100%;
 				}
 
+				.features article .bookMark img {
+					border-radius: 5px 5px 0 0;
+					width: 25%;
+/*					margin: 0 auto;
+*/				}
+
+
+				.features article .bmright img {
+					float: right;
+				}
+				.features article .bmleft img {
+					float: left;
+				}
 		@media screen and (max-width: 980px) {
 
 			.features article {
