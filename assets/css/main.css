@@ -2664,6 +2664,7 @@
 
 			.features article:nth-child(2n) {
 				margin-right: 0;
+				overflow: auto;
 			}
 
 			.features article .image {
