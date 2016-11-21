@@ -1698,9 +1698,15 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 0.5em 0;
+	}
+	h1{
+color: pink;
+font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
 	}
@@ -3929,9 +3935,19 @@
     z-index: -1;
 }
 .hero-vid {
-	width: 50%;
+	width: 100%;
+	position: absolute;
 }
+#introTxt {
+color: red;
+background-color:rgba(22,154,246,0.6)
 
+}
+/*#h1Txt{
+	color: red;
+	background-color:rgba(22,154,246,0.6)
+
+}*/
  /* .hero-vid {
     position: fixed;
     right: 0;
