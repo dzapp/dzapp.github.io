@@ -1,0 +1,45 @@
+.col-4{
+	width: 33.3333%;
+}
+.col-8{
+	width: 66.6666%;
+}
+
+
+.card {
+  cursor: pointer;
+  position: absolute;
+/*   top: 50%; */
+  left: 50%;
+  width: 120px;
+  height: 300px;
+  margin-left: -60px;
+  float: left;
+  perspective: 500px;
+  
+}
+.card img{
+  width: 100%;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card.flip .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+.back {
+  transform: rotateY( 180deg );
+}
