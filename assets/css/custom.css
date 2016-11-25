@@ -5,23 +5,23 @@
 	width: 66.6666%;
 }
 
-
+.col-8, .col-4 {
+	float: left;
+}
 .card {
   cursor: pointer;
-  position: absolute;
+  position: relative;
 /*   top: 50%; */
-  left: 50%;
   width: 120px;
   height: 300px;
-  margin-left: -60px;
-  float: left;
   perspective: 500px;
+  z-index: 10;
   
 }
 .card img{
   width: 100%;
 }
-.content {
+.card .content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -32,14 +32,14 @@
   transform: rotateY( 180deg ) ;
   transition: transform 0.5s;
 }
-.front,
-.back {
+.card .content .front,
+.card .content .back {
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 5px;
   backface-visibility: hidden;
 }
-.back {
+.card .content .back {
   transform: rotateY( 180deg );
 }
