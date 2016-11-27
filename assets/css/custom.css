@@ -43,3 +43,25 @@
 .card .content .back {
   transform: rotateY( 180deg );
 }
+
+#map {
+	float: right;
+	width: 200px;
+	height: 200px;
+	margin: 100px 800px 10px -100px;
+}
+
+#chart {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: -210px 900px 500px -300px;
+	border: 10px solid #aaa;
+}
+
+
+
+
+
+
+
