@@ -44,7 +44,7 @@
   transform: rotateY( 180deg );
 }
 
-#map {
+/*#map {
 	float: right;
 	width: 200px;
 	height: 200px;
@@ -59,9 +59,19 @@
 	border: 10px solid #aaa;
 }
 
+*/
 
+.inner{
+overflow: auto;
+}
 
+.progress{
 
+	color: blue;
+	background-color: green;
+}
 
-
+.amountOfProgress {
+color: pink;
+}
 
