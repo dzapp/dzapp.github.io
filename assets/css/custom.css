@@ -1,3 +1,10 @@
+#bigTitle {
+  font-size:3em;
+  font-weight: 800;
+  text-align: center;
+  display: block;
+}
+
 .col-4{
 	width: 33.3333%;
 }
@@ -108,5 +115,6 @@ color: pink;
   float: right;
   color: black;
 }
+
 
 
