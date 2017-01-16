@@ -14,6 +14,8 @@
 
 .col-8, .col-4 {
 	float: left;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .card {
   cursor: pointer;
@@ -127,7 +129,7 @@ margin: 40px;
 	margin: 35px; 
 
 
- margin-top: 350px;
+ margin-top: 50px;
     margin-bottom: 00px;
     margin-right: 100px;
     margin-left: 0px;
@@ -137,6 +139,11 @@ margin: 40px;
 
 }
 
+iframe {
+
+max-width: 100%;
+
+}
 
 
 
