@@ -1,6 +1,6 @@
 #bigTitle {
-  font-size:3em;
-  font-weight: 800;
+  font-size:2em;
+  font-weight: 600;
   text-align: center;
   display: block;
 }
@@ -199,6 +199,21 @@ box-shadow: 23px 6px 111px -1px rgba(0,0,0,0.52);
   color: blue;
   border-color: blue;
   
+}
+
+.SlideText {
+
+text-align: center;
+  color: green;
+  border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 500px;
+    height: 50px; 
+   margin: auto;
+    width: 50%;
+      padding: 10px;
+
 }
 
 
