@@ -150,9 +150,9 @@ max-width: 100%;
   -webkit-box-shadow: 23px 6px 111px -1px rgba(0,0,0,0.52);
 -moz-box-shadow: 23px 6px 111px -1px rgba(0,0,0,0.52);
 box-shadow: 23px 6px 111px -1px rgba(0,0,0,0.52);
-  height: 500px;
+  max-height: 500px;
   margin: 0 auto;
-  width: 800px;
+  max-width: 800px;
   overflow:hidden
 }
 
