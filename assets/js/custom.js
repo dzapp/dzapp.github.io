@@ -39,6 +39,6 @@ function next() {
   }
 
 }
-setInterval(next, 2000); // Time in milliseconds
+setInterval(next, 5000); // Time in milliseconds
 
 // var intViewportHeight = window.innerHeight;
