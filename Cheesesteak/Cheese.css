@@ -1,0 +1,34 @@
+body {
+
+	background-image: url('pattern.png');
+}
+
+.header {
+margin: 0 auto;
+width: 300px;
+font-size: 20px;
+background: rgba(255,255,255, 0.75);
+text-align: center;
+border-radius: 20px;
+border: 2px solid;
+
+}
+ img {
+
+ 	width: 80%;
+ }
+
+a {
+
+	color: black;
+}
+
+a:hover {
+
+	color: blue;
+}
+
+a:visited {
+
+	color: purple; 
+}
