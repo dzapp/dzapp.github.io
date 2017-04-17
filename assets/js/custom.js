@@ -42,3 +42,15 @@ function next() {
 setInterval(next, 5000); // Time in milliseconds
 
 // var intViewportHeight = window.innerHeight;
+
+  var notice = document.getElementById("notice");
+
+function toggle() {
+
+  if(notice.classList == ""){
+    notice.classList = "open";
+  } else {
+    notice.classList = "";
+  }
+}
+setTimeout( toggle, 4800 );

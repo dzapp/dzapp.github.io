@@ -239,3 +239,36 @@ text-align: center;
 
 
 }
+
+#notice {
+    width: 240px;
+    background: aliceblue;
+    border-top: 14px solid dodgerblue;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    position: fixed;
+    left: -200px;
+    transition: left .4s;
+  padding-right: 38px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  color: black;
+  z-index: 2;
+}
+
+#notice.open {
+   left: 0;
+}
+
+#trophy {
+  position: absolute;
+  right: 15px;
+}
+
+
+#notice h3 {
+  color: black;
+}
+
+
+
