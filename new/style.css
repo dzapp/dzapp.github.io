@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7c00+51,ff7f04+100;Orange+Gloss */
+    /* background: #ffb76b;  */
+    /* Old browsers */
+    /* background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);  */
+    /* FF3.6-15 */
+    /* background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%);  */
+    /* Chrome10-25,Safari5.1-6 */
+    /* background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%);  */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+    background-image: url("http://www.lovethispic.com/uploaded_images/171264-I-Love-You-Mom.jpg");
+    background-size: 200px;
+}
+
+.frame {
+    /*   border: 2px solid; */
+    -webkit-box-shadow: 23px 6px 111px -1px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 23px 6px 111px -1px rgba(0, 0, 0, 0.52);
+    box-shadow: 23px 6px 111px -1px rgba(0, 0, 0, 0.52);
+    height: 450px;
+    margin: 0 auto;
+    width: 800px;
+    overflow: hidden
+}
+
+#slider {
+    /*   border: 1px dashed red; */
+    height: 100%;
+    width: 400%;
+    transition: margin-left 1s;
+    margin-left: 0;
+    background-color: white;
+}
+
+#slider.two {
+    margin-left: -100%;
+}
+
+#slider.three {
+    margin-left: -200%;
+}
+
+#slider.four {
+    margin-left: -300%;
+}
+
+.slide {
+    /*   border: 1px dotted blue; */
+    float: left;
+    width: 25%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7c00+51,ff7f04+100;Orange+Gloss */
+    background: #ffb76b;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04', GradientType=0);
+    /* IE6-9 */
+}
+
+img {
+    width: 100%
+}
+
+h2 {
+    color: blue;
+    width: 700px;
+    background-color: orange;
+}
+
+.slide:nth-child(even)>h2 {
+    color: blue;
+    border-color: blue;
+}
+
+h1 {
+    color: blue;
+    width: 150px;
+    background-color: orange;
+}
