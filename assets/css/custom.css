@@ -240,6 +240,22 @@ text-align: center;
 
 }
 
+@media (max-width: 800px) { #notice {
+    width: 240px;
+    background: aliceblue;
+    border-top: 14px solid dodgerblue;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    position: fixed;
+    left: -220px;
+    transition: left .4s;
+  padding-right: 38px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  color: black;
+  z-index: 2;
+} }
+
 #notice {
     width: 240px;
     background: aliceblue;
