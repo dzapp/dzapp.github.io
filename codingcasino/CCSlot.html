@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CCSlotCSS.css" />
+    <script type="text/javascript" src="JavaScript.js"></script>
+</head>
+
+<body>
+   
+  <header>
+  <h2>You have $<span id="yourMoney">100</span></h2>
+  <h1>Lucky-3 JJ Wins</h1>
+  	<h2>By, Jake Frischmann</h2>
+          </header>   
+
+       <div class="gamebox">
+        <div class="number-container">
+            <h2 id="one"></h2>
+        </div>
+      
+      
+        <div class="number-container">
+            <h2 id="two"></h2>
+        </div>
+      
+      
+        <div class="number-container">
+            <h2 id="three"></h2>
+        </div>
+      
+      
+        <button onclick="spin()">Spin</button>
+      
+      
+<!--         <div class='result-container'>
+            <h3 id='result'></h3>
+        </div> -->
+  
+
+  
+    <div class='info-container'>
+      
+        <div class='info-container-inner'>
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+      
+        <div class='info-container-inner'>
+            <h2>Percentage: <span id="percentage">0.0000%</span></h2>
+        </div>
+      
+        <div class='info-container-inner'>
+            <h2>Money: <span id="money">2000</span></h2>
+        </div>
+    </div>
+  </div>
+  <div id="menu">
+      <button id="diceBtn" onclick="showDice()">Dice Game</button>
+        <button id="slotBtn" onclick="showSlot()">Slot Game</button>
+        <button id="cardsBtn">Card Game</button>
+      </div>
+
+</body>
+
+</html>
