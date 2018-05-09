@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+<header>
+      <h1>Coding Casino</h1>
+  <h2>You have $<span id="yourMoney">100</span></h2>
+      </header>
+<div id="gamesContainer">   
+  <div id="diceBox" class="game show">
+      <h1> Dice Game (patent pending)</h1>
+      
+      
+      <h3>How many dollars would you like to bet?</h3>
+      <input id="moneyBet" type="number" value=""min="0"/> 
+      <h3>What's your Lucky number?</h3>
+      <input id="luckyNum" type="number" value="2" min="2" max="12"/>
+      <br />
+      <br />
+      <button id="dice" onclick="rollDice()">Roll the Dice!</button>
+  		<div id="results"></div>
+  <div id="NextResponse"></div>
+  <button id="ResetBtn" onclick="reset()">Reset</button>
+  </div>  	
+      
+      </div>
+      
+      <div id="menu">
+      <button id="diceBtn" onclick="showDice()">Dice Game</button>
+        <button id="slotBtn" onclick="showSlot()">Slot Game</button>
+        <button id="cardsBtn">Card Game</button>
+      </div>
+
+      <script type="text/javascript" src="JS.js"></script>
+    </body>
+</html>
