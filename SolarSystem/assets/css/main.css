@@ -1785,7 +1785,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #000000;
 		font-size: 3.5em;
 	}
 
@@ -1848,7 +1848,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: ##ef9947;
 		}
 
 	select {
@@ -1948,7 +1948,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4acaa8;
+			border-color: ##ef9947;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2675,8 +2675,8 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
-		color: #d2f2e9;
+		background: #ef9947;
+		color: #000000;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2726,7 +2726,7 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #d2f2e9;
+				color: #000000;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2764,7 +2764,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+					border-top: solid 2px ##ef9947;
 					display: block;
 					padding: 0;
 				}
@@ -2775,15 +2775,15 @@ input, select, textarea {
 						-ms-transition: none;
 						transition: none;
 						border: 0;
-						color: #ffffff !important;
+						color: #000000 !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
+							background: #ebf4f7;
+							color: #000000 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -3289,5 +3289,5 @@ input, select, textarea {
 		width: 100px;
 	}
 	.secFourText{
-		color: #00c79c;
+		color: #ef9947;
 	}
