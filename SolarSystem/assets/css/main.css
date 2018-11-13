@@ -3292,3 +3292,13 @@ input, select, textarea {
 	.secFourText{
 		color: #ef9947;
 	}
+
+	.secondSection{
+		width: 200px;
+		height: 125px;
+		padding: 20px;
+	}
+
+	.firstSection{
+		width: 250px;
+	}
