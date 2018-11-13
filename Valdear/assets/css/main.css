@@ -3405,7 +3405,7 @@ input, select, textarea {
 		}
 
 			#banner .image img {
-				height: 100%;
+				height: 300px;
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
@@ -3414,7 +3414,7 @@ input, select, textarea {
 				-webkit-object-position: center;
 				-ms-object-position: center;
 				object-position: center;
-				width: 100%;
+				width: 230pxs;
 			}
 
 		@media screen and (orientation: portrait) {
@@ -3583,3 +3583,8 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+.valdear{
+	width: 100px;
+	display: inline-block;
+}
