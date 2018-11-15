@@ -3593,3 +3593,12 @@ input, select, textarea {
 	width: 520px;
 	height: 120px;
 }*/
+
+.DISCLAIMER{
+	font-size: 10px;
+}
+
+.aboutPic{
+	width: 150px;
+	display: inline-block;
+}
