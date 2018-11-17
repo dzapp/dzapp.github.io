@@ -3310,7 +3310,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		border-bottom: solid 5px #6294e5
+		border-bottom: solid 15px #6294e5
 ;
 		padding: 6em 0 1em 0;
 		position: relative;
@@ -3601,4 +3601,15 @@ input, select, textarea {
 .aboutPic{
 	width: 150px;
 	display: inline-block;
+}
+
+.bodyText{
+	font-size: 15px;
+}
+.title{
+	color: #6294e5;
+}
+.tagline{
+		color: #6294e5;
+		font-size: 20px;
 }
