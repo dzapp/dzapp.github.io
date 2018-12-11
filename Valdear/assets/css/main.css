@@ -3630,3 +3630,7 @@ h3{
 	width: 300px;
 
 }
+
+.logoLink {
+	border-bottom: none;
+}
