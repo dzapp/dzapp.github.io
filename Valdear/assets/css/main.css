@@ -3518,6 +3518,7 @@ input, select, textarea {
 				text-decoration: none;
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				position: relative;
+				visibility: visible;
 			}
 
 				#menu ul a.opener:before, #menu ul span.opener:before {
@@ -3633,4 +3634,10 @@ h3{
 
 .logoLink {
 	border-bottom: none;
+}
+
+#bannerTrial{
+	background: url("homepage.jpg");
+	background-size: cover;
+
 }
