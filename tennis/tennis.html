@@ -6,16 +6,20 @@
 
 .item1 { grid-area: first; }
 .item2 { grid-area: second; }
+.itemAce {grid-area: ace;}
+.itemDouble {grid-area: fault;}
 .item3 { grid-area: base; }
 .item4 { grid-area: trans; }
 .item5 { grid-area: volley; }
-.item6 {grid-area: next}
+.item6 {grid-area: next;}
+
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'first first first second second second'
-    'base base trans trans volley volley';
+    'base base trans trans volley volley'
+    'ace ace ace fault fault fault';
     grid-gap: 10px;
   background-color: black;
   padding: 10px;
@@ -134,6 +138,8 @@ font-family: 'Roboto Condensed', sans-serif;
 <div class="grid-container">
   <div class="item1">1st Serve <button id="serveOne">0</button><br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
   <div class="item2">2nd Serve <button id="serveTwo">0</button><br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="itemAce">Ace <button>0</button></div>
+   <div class="itemDouble">Double Fault<button>0</button></div>
   <div class="item3"><button class="BTV" onclick="base()">Baseline</button></div>
   <div class="item4"><button class="BTV" onclick="trans()">Transition</button>
 </div>
@@ -189,6 +195,19 @@ font-family: 'Roboto Condensed', sans-serif;
   </div>  -->
 </div>
 
+<div>
+  
+<h1>Analysis</h1>
+How often did you.....
+<button>Get Your First Serve In?</button>
+<button>Get your second serve In?</button>
+<button>Hit in the alley, body, or center of the box? </button>
+<button>Hit forcing shots at the baseline</button>
+<button>Make unforced errors at the baseline</button>
+<button>Hit forcing shots going into net (transition)</button>
+<button>Make unfroced errors going into net (transition)</button>
+
+</div>
 <!-- <p id="ana"><b>Analysis:</b></p>
 <p id="anaTwo"><b>Analysis:</b></p> -->
 <script>
