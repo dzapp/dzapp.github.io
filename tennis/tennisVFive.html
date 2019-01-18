@@ -94,7 +94,7 @@ button:hover {
 #allDone {
   margin-left: 350px;
 }
-#base {
+/*#base {
   width: 100%;
   padding: 50px 0;
   text-align: center;
@@ -102,9 +102,9 @@ button:hover {
   margin-top: 20px;
   border: solid 5px;
   display: none;
-}
+}*/
 
-#trans {
+/*#trans {
   width: 100%;
   padding: 50px 0;
   text-align: center;
@@ -112,7 +112,7 @@ button:hover {
   margin-top: 20px;
   border: solid 5px;
   display: none; 
-}
+}*/
 
 #voll {
   width: 100%;
@@ -121,7 +121,7 @@ button:hover {
   background-color: orange;
   margin-top: 20px;
   border: solid 5px;
-  display: none;
+  /*display: none;*/
 }
 
 .item6 { grid-area: ad; }
@@ -182,25 +182,27 @@ RAF - return ad force (thats just an example)
 */
 
 .item16 { grid-area: ad; }
-.item17{ grid-area: duece; }
+.item17{ grid-area: deuce; }
 .item18 { grid-area: forceRAF; }
 .item19 { grid-area: unforceRAU; }
 .item20 { grid-area: forceRDF; }
 .item21{ grid-area: unforcedRDU; }
 .item22 { grid-area: AtD; }
 .item23 { grid-area: DtA; }
-/*.item24 { grid-area: forceRDF; }
-.item25{ grid-area: unforcedRDU; }
-.item26 { grid-area: AtD; }
-.item27 { grid-area: DtA; }*/
+.item24 { grid-area: forceRAtD; }
+.item25{ grid-area: unforcedRAtD; }
+.item26 { grid-area: forcedRDtA; }
+.item27 { grid-area: unforcedRDtA; }
 
 .grid-containerReturn {
   display: grid;
   grid-template-areas:
-    'ad ad ad duece duece duece'
+    'ad ad ad deuce deuce deuce'
     'forceRAF forceRAF forceRAF forceRDF forceRDF forceRDF'
     'unforceRAU unforceRAU unforcedRAU unforcedRDU unforcedRDU unforcedRDU'
-    'AtD AtD AtD DtA DtA DtA';
+    'AtD AtD AtD DtA DtA DtA'
+    'forceRAtD forceRAtD forceRAtD forcedRDtA forcedRDtA forcedRDtA'
+    'unforcedRAtD unforcedRAtD unforcedRAtD unforcedRDtA unforcedRDtA unforcedRDtA';
   grid-gap: 10px;
   background-color: orange;
   padding: 10px;
@@ -219,25 +221,27 @@ font-family: 'Roboto Condensed', sans-serif;
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 </head>
 <body>
+
 <!-- <h1>The Tennis Tracker</h1> -->
 <img class="logo" src="TMA2.png" alt="">
 <p class="initalScore">Set: <button id="MySet" onclick="MySet()">0</button> - <button id="Oset" onclick="Oset()">0</button>Point: <button onclick="won()" id="win">0</button> - <button max="40" id="loose">0</button> Game: <button onclick="Mygame()" id="Mygame">0</button> - <button onclick="Ogame()" id="Ogame">0</button></p>
-<!-- <button onclick="next()">Next Point!!</button>
- --><button id="allDone" onclick="loveAll()">ALL DONE!! (reset all numbers)</button>
+<button id="allDone" onclick="loveAll()">ALL DONE!! (reset all numbers)</button>
 <!-- <button id="analysis" onclick="Analyze()">How Did You Do?</button>
 <button id="analysis2" onclick="TRIAL()">How Did You Do?</button> -->
+
 <!-- BEGIN POINT-->
  <h2>How Did the Point Begin</h2>
 <div class="grid-container">
   <div class="item1">1st Serve - Ad<br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
-  <div class="item1D">1st Serve - Duece <br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
+  <div class="item1D">1st Serve - Deuce <br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
   <div class="item2">2nd Serve - Ad<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
-  <div class="item2D">2nd Serve - Duece<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="item2D">2nd Serve - Deuce<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
   <div class="item3"><button class="return" onclick="return()">End on Return?</button></div>
   <div class="itemAce">Ace <button>0</button></div>
    <div class="itemDouble">Double Fault<button>0</button></div>
 </div><br>
 
+<!-- END POINT -->
 <h2>How Did It End</h2>
 <div class="grid-container-end">
   <div class="item12"><button class="BTV" onclick="base()">Baseline</button></div>
@@ -247,51 +251,67 @@ font-family: 'Roboto Condensed', sans-serif;
 </div>
 <div class="item15"><button class="BTV" onclick="volley()">Volley</button></div>
  </div>
-<!--  END OF POINT -->
-<!-- <h2>How Did the Point End?</h2>
-<div class="end-grid-container">
-  <div class="endOne"><button class="BTV" onclick="base()">Baseline</button></div>
-  <div class="endTwo"><button class="BTV" onclick="trans()">Transition</button>
-</div>
-<div class="endThree"><button class="BTV" onclick="volley()">Volley</button></div>
-</div> -->
 
- 
 <button onclick="next()" id="nextBTN">Next Point (Remove Baseline or Transition Screen Between Each Point)</button>
 
 <!-- BTV = baseline transition volley to speperate from regular screen -->
-<!-- <button onclick="base()">Baseline</button>
-<button onclick="trans()">Transition</button>
-<button onclick="volley()">Volley</button>
-<button onclick="next()">Next Point!!</button> -->
-<!-- <button onclick="reset()">ALL DONE!! (reset all numbers)</button> -->
 
+<div id="return">
+<h1>Return of Serve</h1></b>
+<div class="grid-containerReturn">
+    <div class="item16">AD</div>
+    <div class="item17">Deuce</div>
+    <div class="item18">Forcing: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
+    <div class="item19">Unforced: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
+    <div class="item20">Forcing: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
+    <div class="item21">Unforced: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
+    <div class="item22">AD to DEUCE</div>
+    <div class="item23">DEUCE to AD</div>
+    <div class="item24">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button></div>
+    <div class="item25">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button></div>
+    <div class="item26">Forcing: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button></div>
+    <div class="item27">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> </div>
+  </div> 
+</div>
 
 <div id="base">
-<h1>Baseline</h1> </b> 
-<div class="grid-containerBTV">
+  <h1>Baseline</h1> <br>
+  <div class="grid-containerBTV">
     <div class="item6">AD</div>
-    <div class="item7">DUECE</div>
+    <div class="item7">DEUCE</div>
     <!-- ad -->
     <div class="item8">Forcing: #1 <button id="baf1">0</button> #2 <button id="baf2">0</button> #3 <button id="baf3">0</button> #4 <button id="baf4">0</button></div>
     <div class="item9">Unforced: #1 <button id="bau1">0</button> #2 <button id="bau2">0</button> #3 <button id="bau3">0</button> #4 <button id="bau4">0</button></div>
     <!-- duece -->
     <div class="item10">Forcing: #1 <button id="bdf1">0</button> #2 <button id="bdf2">0</button> #3 <button id="bdf3">0</button> #4 <button id="bdf4">0</button></div>
     <div class="item11">Unforced: #1 <button id="bdu1">0</button> #2 <button id="bdu2">0</button> #3 <button id="bdu3">0</button> #4 <button id="bdu4">0</button></div>
-  </div> 
+  </div>
 </div>
 
-<div id="trans">
-<h1>Transition</h1></b>
+
+<div id="ap">
+<h1>Approch Shot</h1></b>
 <div class="grid-containerBTV">
     <div class="item6">AD</div>
-    <div class="item7">DUECE</div>
+    <div class="item7">DEUCE</div>
     <div class="item8">Forcing: #1 <button id="taf1">0</button> #2 <button id="taf2">0</button> #3 <button id="taf3">0</button> #4 <button id="taf4">0</button></div>
     <div class="item9">Unforced: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button> #3 <button id="tau3">0</button> #4 <button id="tau4">0</button></div>
     <div class="item10">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button> #3 <button id="tdf3">0</button> #4 <button id="tdf4">0</button></div>
     <div class="item11">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div>
   </div> 
-</div>
+ </div>
+
+ <div id="pa">
+<h1>Passing Shot</h1></b>
+<div class="grid-containerBTV">
+    <div class="item6">AD</div>
+    <div class="item7">DEUCE</div>
+    <div class="item8">Forcing: #1 <button id="taf1">0</button> #2 <button id="taf2">0</button> #3 <button id="taf3">0</button> #4 <button id="taf4">0</button></div>
+    <div class="item9">Unforced: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button> #3 <button id="tau3">0</button> #4 <button id="tau4">0</button></div>
+    <div class="item10">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button> #3 <button id="tdf3">0</button> #4 <button id="tdf4">0</button></div>
+    <div class="item11">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div>
+  </div> 
+ </div>
 
 <div id="voll">
 <h1>Volley</h1></b>
@@ -304,24 +324,6 @@ font-family: 'Roboto Condensed', sans-serif;
     <div class="item5">Forcing: #1 <button>0</button> #2 <button>0</button> #3 <button>0</button> #4 <button>0</button></div>
     <div class="item6">Unforced: #1 <button>0</button> #2 <button>0</button> #3 <button>0</button> #4 <button>0</button></div>
   </div>  -->
-</div>
-
-<div id="return">
-<h1>Return of Serve</h1></b>
-<div class="grid-containerReturn">
-    <div class="item16">AD</div>
-    <div class="item17">DUECE</div>
-    <div class="item18">Forcing: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
-    <div class="item19">Unforced: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
-    <div class="item20">Forcing: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
-    <div class="item21">Unforced: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
-   <!--  <div class="item22">AD to DUECE</div>
-    <div class="item23">DUECE to AD</div>
-    <div class="item24">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button> #3 <button id="tdf3">0</button> #4 <button id="tdf4">0</button></div>
-    <div class="item25">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div>
-    <div class="item26">Forcing: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button> #3 <button id="tau3">0</button> #4 <button id="tau4">0</button></div>
-    <div class="item27">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div> -->
-  </div> 
 </div>
 
 <!-- <div>
@@ -483,114 +485,82 @@ TwoC.onclick = function() {
 // volley gets rid of BASE and TRANS
 //VARS:
 //  b is to get rid of BASE
-// t is to get rid of TRANS
+// t is to get rid of APPROCH
 //  v is to get rid of VOLLEY
-function trans() {
-  // var b = document.getElementById("base");
-  // if (b.style.display === "none") {
-  //   b.style.display = "block";
-  // } else {
-  //   b.style.display = "none";
-  // }
-  
-  //  var v = document.getElementById("voll");
-  // if (v.style.display === "none") {
-  //   v.style.display = "block";
-  // } else {
-  //   v.style.display = "none";
-  // }
+// p is to get rid of PASSING
+// function ap() {
+//   var t = document.getElementById("ap");
+//   if (t.style.display === "none") {
+//     t.style.display = "block";
+//    } else {
+//      t.style.display = "block";
+//    }
+// }
 
-  var t = document.getElementById("trans");
-  if (t.style.display === "none") {
-    t.style.display = "block";
-   } else {
-     t.style.display = "block";
-   }
-}
+// function pa() {
+//   var p = document.getElementById("pa");
+//   if (p.style.display === "none") {
+//     p.style.display = "block";
+//    } else {
+//      p.style.display = "block";
+//    }
+// }
 
-function base() {
-  // var t = document.getElementById("trans");
-  // if (t.style.display === "none") {
-  //   t.style.display = "block";
-  // } else {
-  //   t.style.display = "none";
-  // }
-  
-  // var v = document.getElementById("voll");
-  // if (v.style.display === "none") {
-  //   v.style.display = "block";
-  // } else {
-  //   v.style.display = "none";
-  // }
+// function base() {
+//   var b = document.getElementById("base");
+//   if (b.style.display === "none") {
+//     b.style.display = "block";
+//    } else {
+//      b.style.display = "block";
+//    }
+// }
 
-  var b = document.getElementById("base");
-  if (b.style.display === "none") {
-    b.style.display = "block";
-   } else {
-     b.style.display = "block";
-   }
-}
+// function volley() {
+//   var v = document.getElementById("voll");
+//   if (v.style.display === "none") {
+//     v.style.display = "block";
+//    } else {
+//      v.style.display = "block";
+//    }
+// }
 
-function volley() {
-  //  var b = document.getElementById("base");
-  // if (b.style.display === "none") {
-  //   b.style.display = "block";
-  // } else {
-  //   b.style.display = "none";
-  // }
-  
-  // var t = document.getElementById("trans");
-  // if (t.style.display === "none") {
-  //   t.style.display = "block";
-  // } else {
-  //   t.style.display = "none";
-  // }
+// function return() {
+//   var r = document.getElementById("return");
+//   if (r.style.display === "none") {
+//     r.style.display = "block";
+//    } else {
+//      r.style.display = "block";
+//    }
+// }
+// function next(){
+//     var b = document.getElementById("base");
+//   if (b.style.display === "block") {
+//     b.style.display = "none";
+//   } else {
+//     b.style.display = "none";
+//   }
 
-  var v = document.getElementById("voll");
-  if (v.style.display === "none") {
-    v.style.display = "block";
-   } else {
-     v.style.display = "block";
-   }
-}
+//   var t = document.getElementById("trans");
+//   if (t.style.display === "block") {
+//     t.style.display = "none";
+//   } else {
+//     t.style.display = "none";
+//   }
 
-function return() {
-  var r = document.getElementById("return");
-  if (r.style.display === "none") {
-    r.style.display = "block";
-   } else {
-     r.style.display = "block";
-   }
-}
-function next(){
-    var b = document.getElementById("base");
-  if (b.style.display === "block") {
-    b.style.display = "none";
-  } else {
-    b.style.display = "none";
-  }
-
-  var t = document.getElementById("trans");
-  if (t.style.display === "block") {
-    t.style.display = "none";
-  } else {
-    t.style.display = "none";
-  }
-
-  var v = document.getElementById("voll");
-  if (v.style.display === "block") {
-    v.style.display = "none";
-  } else {
-    v.style.display = "none";
-  }
-}
-  var r = document.getElementById("return");
-  if (r.style.display === "block") {
-    r.style.display = "none";
-   } else {
-     r.style.display = "none";
-   }
-}
+//   var v = document.getElementById("voll");
+//   if (v.style.display === "block") {
+//     v.style.display = "none";
+//   } else {
+//     v.style.display = "none";
+//   }
+// }
+//   var r = document.getElementById("return");
+//   if (r.style.display === "block") {
+//     r.style.display = "none";
+//    } else {
+//      r.style.display = "none";
+//    }
+// }
 // COUNTERS: capita = vars lower = id 
 //Baseline Ad Forcing 1-4 (baf1-4)
 var BAF1 = document.getElementById("baf1"),
