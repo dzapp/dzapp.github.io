@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="TrackerMed.css" />
+</head>
+<body >
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main TRAKING SECTION-->
+        <h1>Tennis Traker - Medium</h1><br>
+        <button class="main"><a href="file:///Users/dannyzappin/Documents/GitHub/dzapp.github.io/TennisHome/index.html">Back to Main</a></button><br>
+        
+            <!-- SCORE -->
+
+        <p class="initalScore">Set: <button id="MySet" onclick="MySet()">0</button> - <button id="Oset" onclick="Oset()">0</button>Point: <button onclick="won()" id="win">0</button> - <button max="40" id="loose">0</button> Game: <button onclick="Mygame()" id="Mygame">0</button> - <button onclick="Ogame()" id="Ogame">0</button></p>
+
+       
+          <section id="main">
+              <!-- BEGIN POINT-->
+            <div id="start">
+            Player 1: <input type="text" id="myText" value="player1">
+
+Player 2: <input type="text" id="myText2" value="player2">
+
+<p>Who will server first?</p>
+
+<button onclick="Servers()">Click to choose server</button>
+
+<button onclick="firstServer()" id="demo">Player 1</button>
+
+<button onclick="firstServer2()" id="demo2">Player 2</button>
+
+
+</div>
+<h1 id="FirstServe"></h1>
+<h1 id="FirstServe2"></h1>
+  <h1>How Did the Point Begin?</h1>
+  <button class="reset" onclick="Reset()">Reset</button>
+  <div class="grid-container">
+  <div class="grid-item">Ad</div>
+  <div class="grid-item">Duece</div>
+  <div class="grid-item">1st Serve<br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
+  <div class="grid-item">1st Serve<br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
+  <div class="grid-item">2nd Serve<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="grid-item">2nd Serve<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="grid-item">Ace <button>0</button></div>
+  <div class="grid-item">Double Fault<button>0</button></div>
+</div>
+<button><a href="#mid">How did the point end?</a></button><br>
+<button onclick="topFunction()" id="topBTN2" title="Go to top">Top</button>
+<br>
+
+<button>Need help with the start of point section?</button>
+          </section>
+          <div id="mid">
+            <h1>Where did the point end?</h1>
+            <div class="grid-container3">
+  <div class="grid-item3"><button><a href="#base">Baseline</a></button></div>
+  <div class="grid-item3"><img src="images/tennis_court2.jpg" alt=""></div>
+  <div class="grid-item3"><button><a href="#voll">Volley</a></button></div>
+  <div class="grid-item3"><img src="images/tennis_court2.jpg" alt=""></div>
+  <div class="grid-item3"><button><a href="#ap">Approach Shot</a></button></div>
+  <div class="grid-item3"><img src="images/tennis_court2.jpg" alt=""></div>
+
+          </div>
+
+<!--           END POINT
+ -->          
+<div id="base">
+<h1>End of Point - From BASELINE</h1> </b> 
+<button>Player 1 or Player 2</button>
+<!-- ADD IN DROP DOWN FOR EACH PLAYER
+ --><div class="grid-container2">
+  <div class="grid-item2">Ad</div>
+  <div class="grid-item2">Duece</div>
+  <div class="grid-item2">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+</div>
+<button onclick="topFunction()" id="topBTN3" title="Go to top">Top</button>
+</div>
+
+<div id="voll">
+<h1>End of Point - From VOLLEY</h1> </b> 
+<button>Player 1 or Player 2</button>
+<!-- ADD IN DROP DOWN FOR EACH PLAYER
+ --><div class="grid-container4">
+  <div class="grid-item4">Ad</div>
+  <div class="grid-item4">Duece</div>
+  <div class="grid-item4">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item4">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item4">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item4">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+</div>
+</div>
+
+<div id="ap">
+<h1>End of Point - From AN APPORACH SHOT</h1> </b> 
+<button>Player 1 or Player 2</button>
+<!-- ADD IN DROP DOWN FOR EACH PLAYER
+ --><div class="grid-container5">
+  <div class="grid-item5">Ad</div>
+  <div class="grid-item5">Duece</div>
+  <div class="grid-item5">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item5">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item5">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item5">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+</div>
+</div>
+<br>
+<button onclick="topFunction()" id="topBTN" title="Go to top">Top</button>
+        <!-- Footer -->
+          <footer id="footer">
+            <ul class="copyright">
+              <li>&copy; Danny Zappin and Mark Spann</li>
+            </ul>
+          </footer>
+
+      
+ 
+
+
+
+
+</body>
+<script>
+
+
+  // SECTIONS FOR NEW VERSION
+
+//   function end() {
+
+//   var s = document.getElementById("end");
+//   if (s.style.display === "none") {
+//     s.style.display = "block";
+//    } else {
+//      s.style.display = "block";
+//    }
+// }
+//   function start() {
+
+//   var e = document.getElementById("end");
+//   if (e.style.display === "none") {
+//     e.style.display = "block";
+//    } else {
+//      e.style.display = "block";
+//    }
+// }
+//ALL THE WAY AT THE BOTTOM
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("topBTN").style.display = "block";
+  } else {
+    document.getElementById("topBTN").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+//BAELINE TOP BUTTON
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("topBTN2").style.display = "block";
+  } else {
+    document.getElementById("topBTN2").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//VOLLEY IN THE MIDDLE
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("topBTN3").style.display = "block";
+  } else {
+    document.getElementById("topBTN3").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+  
+
+    if ('addEventListener' in window) {
+          window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+          document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+function Servers() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = x;
+  
+    var y = document.getElementById("myText2").value;
+  document.getElementById("demo2").innerHTML = y;
+}
+
+function firstServer() {
+  var firstServe = document.getElementById("myText").value;
+  
+  document.getElementById("FirstServe").innerHTML = firstServe + " is serving first!";
+
+     var s = document.getElementById("start");
+  if (s.style.display === "block") {
+    s.style.display = "none";
+   } else {
+     s.style.display = "none";
+   }
+}
+
+function firstServer2() {
+  var firstServe2 = document.getElementById("myText2").value;
+  
+  document.getElementById("FirstServe2").innerHTML = firstServe2 + " is serving first!";
+
+     var s = document.getElementById("start");
+  if (s.style.display === "block") {
+    s.style.display = "none";
+   } else {
+     s.style.display = "none";
+   }
+}
+
+
+function Reset() {
+  document.getElementById("FirstServe").innerHTML = "";
+
+    document.getElementById("FirstServe2").innerHTML = "";
+
+      var e = document.getElementById("start");
+  if (e.style.display === "none") {
+    e.style.display = "block";
+   } else {
+     e.style.display = "block";
+   }
+
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="TrackerBeg.css" />
+</head>
+<body >
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main TRAKING SECTION-->
+        <h1>Tennis Traker</h1><br>
+        <button><a href="file:///Users/dannyzappin/Documents/GitHub/dzapp.github.io/TennisHome/index.html">Back to Main</a></button><br>
+            <!-- SCORE -->
+
+        <p class="initalScore">Set: <button id="MySet" onclick="MySet()">0</button> - <button id="Oset" onclick="Oset()">0</button>Point: <button onclick="won()" id="win">0</button> - <button max="40" id="loose">0</button> Game: <button onclick="Mygame()" id="Mygame">0</button> - <button onclick="Ogame()" id="Ogame">0</button></p>
+
+       
+          <section id="main">
+              <!-- BEGIN POINT-->
+            <div class="start">
+            Player 1: <input type="text" id="myText" value="player1">
+
+Player 2: <input type="text" id="myText2" value="player2">
+
+<p>Who will server first?</p>
+
+<button onclick="Servers()">Click to choose server</button>
+
+<button onclick="firstServer()"id="demo"></button>
+
+<button onclick="firstServer2()" id="demo2"></button>
+<h1 id="FirstServe"></h1>
+</div>
+  <h1>How Did the Point Begin?</h1>
+<div class="grid-container">
+  <div class="item1">1st Serve<br><button id="1Serve">0</button></div>
+  <div class="item2">2nd Serve<br> <button id="2Serve">0</button></div>
+  <div class="itemAce">Ace <button>0</button></div>
+   <div class="itemDouble">Double Fault<button>0</button></div>
+ </div>
+<br>
+
+ <button><a href="#end">How did the point end?</a></button>
+ <br><br>
+<button>Need help with the start of point section?</button>
+          </section>
+
+<!--           END POINT
+ -->          
+<div id="end">
+<h1>End of Point</h1> </b> 
+<button>Player 1 or Player 2</button>
+<!-- ADD IN DROP DOWN FOR EACH PLAYER
+ --><div class="grid-container2">
+  <div class="grid-item2">Ad</div>
+  <div class="grid-item2">Duece</div>
+  <div class="grid-item2">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Forcing - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+  <div class="grid-item2">Unforced - Forehand<button>0</button> <br> Backhand <button>0</button></div>
+</div>
+</div>
+<br>
+<button onclick="topFunction()" id="topBTN" title="Go to top">Top</button>
+        <!-- Footer -->
+          <footer id="footer">
+            <ul class="copyright">
+              <li>&copy; Danny Zappin and Mark Spann</li>
+            </ul>
+          </footer>
+
+      
+ 
+
+
+
+
+</body>
+<script>
+
+
+  // SECTIONS FOR NEW VERSION
+
+//   function end() {
+
+//   var s = document.getElementById("end");
+//   if (s.style.display === "none") {
+//     s.style.display = "block";
+//    } else {
+//      s.style.display = "block";
+//    }
+// }
+//   function start() {
+
+//   var e = document.getElementById("end");
+//   if (e.style.display === "none") {
+//     e.style.display = "block";
+//    } else {
+//      e.style.display = "block";
+//    }
+// }
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("topBTN").style.display = "block";
+  } else {
+    document.getElementById("topBTN").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+  
+
+    if ('addEventListener' in window) {
+          window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+          document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+        }
+function Servers() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = x;
+  
+    var y = document.getElementById("myText2").value;
+  document.getElementById("demo2").innerHTML = y;
+}
+
+function firstServer() {
+  var firstServe = document.getElementById("myText").value;
+  
+  document.getElementById("FirstServe").innerHTML = firstServe + " is serving first!";
+}
+</script>
+
+</body>
+</html>
+
