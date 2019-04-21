@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dzapp Home Page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/coach.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/TMA3.png" alt="" /></span>
+							<h2>Welcome to the Tennis Tracker - Coaches Edition</h2>
+							<!-- <p>Powered by Tennis Match Academy</p> -->
+						</header>
+						
+						<hr/>
+
+						<button class="topBTN">Start Tracking</button><br>
+<br>
+						<!-- <button>Settings</button> -->
+
+						<button class="topBTN">About Tennis Tracker</button>
+						<button class="topBTN">Need Help Understanding Tracker   </button>
+						<hr />
+						
+						
+						<!-- <footer>
+							<ul class="icons">
+								<li><a href="http://dzapp.github.io/" class="fa-bookmark">Bar Mitvah Site</a></li>
+								<li><a href="#" class="fa-instagram">Instagram</a></li>
+								<li><a href="#" class="fa-facebook">Facebook</a></li>
+							</ul>
+						</footer> -->
+					</section><br>
+<section id="track">
+	
+							<p class="initalScore">Set: <button id="MySet" onclick="MySet()">0</button> - <button id="Oset" onclick="Oset()">0</button>Point: <button onclick="won()" id="win">0</button> - <button max="40" id="loose">0</button> Game: <button onclick="Mygame()" id="Mygame">0</button> - <button onclick="Ogame()" id="Ogame">0</button></p>
+<button id="allDone" onclick="loveAll()">Reset/New Match</button>
+								 <h2>How Did the Point Begin</h2>
+<div class="grid-container">
+  <div class="item1">1st Serve - Ad<br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
+  <div class="item1D">1st Serve - Deuce <br> Alley <button id="1Alley">0</button> Body <button id="1Body">0</button> Center <button id="1Center">0</button></div>
+  <div class="item2">2nd Serve - Ad<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="item2D">2nd Serve - Deuce<br> Alley <button id="2Alley">0</button> Body <button id="2Body">0</button> Center <button id="2Center">0</button></div>
+  <div class="item3"><a href="#two"><button class="return" onclick="return()">End on Return?</button></a></div>
+  <div class="itemAce">Ace <button>0</button></div>
+   <div class="itemDouble">Double Fault<button>0</button></div>
+</div><br>
+
+<!-- <button onclick="next()" id="nextBTN">Next Point (Remove Baseline or Transition Screen Between Each Point)</button> -->
+								</div>
+							</section>
+<!-- END OF POINT -->
+
+<section id="end">
+	<div class="container">
+		<h2>How Did the Point End?</h2>
+<div class="grid-container-end">
+  <div class="item12"><a href="#three"><button class="BTV" onclick="base()">Baseline</button></a></div>
+  <div class="item13"><a href="#four"><button class="BTV" onclick="ap()">Approach Shot</button></a>
+</div>
+<div class="item14"><a href="#five"><button class="BTV" onclick="pa()">Passing Shot</button></a>
+</div>
+<div class="item15"><a href="#six"><button class="BTV" onclick="volley()">Volley</button></a></div>
+ </div>
+	</div>
+</section>
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h2>Return of Serve</h2>
+									<div id="return">
+<div class="grid-containerReturn">
+    <div class="item16">AD</div>
+    <div class="item17">Deuce</div>
+    <div class="item18">Forcing: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
+    <div class="item19">Unforced: #3 <button id="taf1">0</button> #4 <button id="taf2">0</button> </div>
+    <div class="item20">Forcing: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
+    <div class="item21">Unforced: #3 <button id="tau1">0</button> #4 <button id="tau2">0</button> </div>
+    <div class="item22">AD to DEUCE</div>
+    <div class="item23">DEUCE to AD</div>
+    <div class="item24">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button></div>
+    <div class="item25">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button></div>
+    <div class="item26">Forcing: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button></div>
+    <div class="item27">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> </div>
+  </div> 
+</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h2>Baseline Shot</h2>
+
+  <div class="grid-containerBTV">
+    <div class="item6">AD</div>
+    <div class="item7">DEUCE</div>
+    <!-- ad -->
+    <div class="item8">Forcing: #1 <button id="baf1">0</button> #2 <button id="baf2">0</button> #3 <button id="baf3">0</button> #4 <button id="baf4">0</button></div>
+    <div class="item9">Unforced: #1 <button id="bau1">0</button> #2 <button id="bau2">0</button> #3 <button id="bau3">0</button> #4 <button id="bau4">0</button></div>
+    <!-- duece -->
+    <div class="item10">Forcing: #1 <button id="bdf1">0</button> #2 <button id="bdf2">0</button> #3 <button id="bdf3">0</button> #4 <button id="bdf4">0</button></div>
+    <div class="item11">Unforced: #1 <button id="bdu1">0</button> #2 <button id="bdu2">0</button> #3 <button id="bdu3">0</button> #4 <button id="bdu4">0</button></div>
+  </div>
+</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h2>Approcah Shot</h2>
+									<div id="ap">
+
+<div class="grid-containerBTV">
+    <div class="item6">AD</div>
+    <div class="item7">DEUCE</div>
+    <div class="item8">Forcing: #1 <button id="taf1">0</button> #2 <button id="taf2">0</button> #3 <button id="taf3">0</button> #4 <button id="taf4">0</button></div>
+    <div class="item9">Unforced: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button> #3 <button id="tau3">0</button> #4 <button id="tau4">0</button></div>
+    <div class="item10">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button> #3 <button id="tdf3">0</button> #4 <button id="tdf4">0</button></div>
+    <div class="item11">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div>
+  </div> 
+ </div>
+
+								</div>
+							</section>
+							<!-- Five  -->
+							<section id="five">
+								<div class="container">
+									<h2>Passing Shot</h2>
+									 <div id="pa">
+<div class="grid-containerBTV">
+    <div class="item6">AD</div>
+    <div class="item7">DEUCE</div>
+    <div class="item8">Forcing: #1 <button id="taf1">0</button> #2 <button id="taf2">0</button> #3 <button id="taf3">0</button> #4 <button id="taf4">0</button></div>
+    <div class="item9">Unforced: #1 <button id="tau1">0</button> #2 <button id="tau2">0</button> #3 <button id="tau3">0</button> #4 <button id="tau4">0</button></div>
+    <div class="item10">Forcing: #1 <button id="tdf1">0</button> #2 <button id="tdf2">0</button> #3 <button id="tdf3">0</button> #4 <button id="tdf4">0</button></div>
+    <div class="item11">Unforced: #1 <button id="tdu1">0</button> #2 <button id="tdu2">0</button> #3 <button id="tdu3">0</button> #4 <button id="tdu4">0</button></div>
+  </div> 
+ </div>
+
+								</div>
+							</section>
+							<!-- Six  -->
+						<section id="six">
+							<div class="container">
+								<h2>Volley</h2>
+								<div id="voll">
+									<p>not done yet...come back soon!! ;)</p>
+								</div>
+							</div>
+							</section>
+</section>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Danny Zappin and Mark Spann</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+
+				function dropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+			</script>
+
+	</body>
+</html>

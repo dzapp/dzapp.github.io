@@ -23,8 +23,8 @@
 
        
           <section id="main">
-              <!-- BEGIN POINT-->
-            <div class="start">
+                <!-- BEGIN POINT-->
+            <div id="start">
             Player 1: <input type="text" id="myText" value="player1">
 
 Player 2: <input type="text" id="myText2" value="player2">
@@ -33,11 +33,14 @@ Player 2: <input type="text" id="myText2" value="player2">
 
 <button onclick="Servers()">Click to choose server</button>
 
-<button onclick="firstServer()"id="demo"></button>
+<button onclick="firstServer()" id="demo">Player 1</button>
 
-<button onclick="firstServer2()" id="demo2"></button>
-<h1 id="FirstServe"></h1>
+<button onclick="firstServer2()" id="demo2">Player 2</button>
+
+
 </div>
+<h1 id="FirstServe"></h1>
+<h1 id="FirstServe2"></h1>
   <h1>How Did the Point Begin?</h1>
 <div class="grid-container">
   <div class="item1">1st Serve<br><button id="1Serve">0</button></div>
@@ -56,8 +59,13 @@ Player 2: <input type="text" id="myText2" value="player2">
  -->          
 <div id="end">
 <h1>End of Point</h1> </b> 
-<button>Player 1 or Player 2</button>
-<!-- ADD IN DROP DOWN FOR EACH PLAYER
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Choose Player</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a>Player1</a>
+    <a>Player2</a>
+  </div>
+</div><!-- ADD IN DROP DOWN FOR EACH PLAYER
  --><div class="grid-container2">
   <div class="grid-item2">Ad</div>
   <div class="grid-item2">Duece</div>
@@ -141,6 +149,60 @@ function firstServer() {
   var firstServe = document.getElementById("myText").value;
   
   document.getElementById("FirstServe").innerHTML = firstServe + " is serving first!";
+
+     var s = document.getElementById("start");
+  if (s.style.display === "block") {
+    s.style.display = "none";
+   } else {
+     s.style.display = "none";
+   }
+}
+
+function firstServer2() {
+  var firstServe2 = document.getElementById("myText2").value;
+  
+  document.getElementById("FirstServe2").innerHTML = firstServe2 + " is serving first!";
+
+     var s = document.getElementById("start");
+  if (s.style.display === "block") {
+    s.style.display = "none";
+   } else {
+     s.style.display = "none";
+   }
+}
+
+
+function Reset() {
+  document.getElementById("FirstServe").innerHTML = "";
+
+    document.getElementById("FirstServe2").innerHTML = "";
+
+      var e = document.getElementById("start");
+  if (e.style.display === "none") {
+    e.style.display = "block";
+   } else {
+     e.style.display = "block";
+   }
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 

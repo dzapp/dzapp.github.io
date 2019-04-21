@@ -7,9 +7,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-img {
-	width: 100px;
-}
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -86,7 +84,7 @@ img {
 
 	body {
 		height: 100%;
-		background-color: #2cae1e;
+		background-color: #e56931;
 		/*background-image: url("../../images/Background.jpg");*/
 		background-repeat: 	repeat;
 		background-size: 50%;
@@ -167,7 +165,7 @@ img {
 		}
 
 		a:hover {
-			color: #f4a502;
+			color: #ff7496;
 		}
 
 	strong, b {
@@ -855,37 +853,68 @@ img {
 			height: 100%;
 		}
 
-		body {
-  background-color: #2cae1e;
-}
-
-/*TRACKER SECTION!!!!
+/*TRACKER SECTION
 */
-
-
-
-.item1 { grid-area: first; }
-.item2 { grid-area: second; }
+.item1 { grid-area: firstA; }
+.item2 { grid-area: secondA; }
+.item1D { grid-area: firstD; }
+.item2D { grid-area: secondD; }
+.item3 { grid-area: return; }
+/*.item4 { grid-area: trans; }
+.item5 { grid-area: volley; }*/
 .itemAce {grid-area: ace;}
 .itemDouble {grid-area: fault;}
+.item6 {grid-area: next;}
 
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'first first first second second second'
-    'ace ace ace fault fault fault';
+    'firstA firstA firstA firstD firstD firstD'
+    'secondA secondA secondA secondD secondD secondD'
+    'ace ace ace fault fault fault'
+    'return return return return return return';
     grid-gap: 10px;
   background-color: black;
   padding: 10px;
 
 }
 
+/*.item1 { grid-area: first; }
+.item2 { grid-area: second; }
+.item3 { grid-area: base; }
+.item4 { grid-area: trans; }
+.item5 { grid-area: volley; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'first first first second second second'
+    'base base trans trans volley volley';
+  grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+}*/
+
+/*.endOne { grid-area: base; }
+.endTwo { grid-area: trans; }
+.endThree { grid-area: volley; }
+
+.end-grid-container {
+  display: grid;
+  grid-template-areas:
+    'endOne endOne endTwo endTwo endThree endThree';
+    grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+
+}*/
 .grid-container > div {
   background-color: orange;
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .initalScore{
@@ -893,62 +922,146 @@ img {
       font-size: 20px;
 }
  
-/* END OF POINT
+#nextBTN {
+  align-self: center;
+  padding: 20px;
+  margin-left: 250px;
+}
+
+/*BTV SECTION*/
+
+button {
+  background-color: #efc797; 
+  color: black; 
+  border: 2px solid orange;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: orange;
+  color: white;
+}
+
+#allDone {
+  margin-left: 350px;
+}
+/*#base {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: orange;
+  margin-top: 20px;
+  border: solid 5px;
+  display: none;
+}*/
+
+/*#trans {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: orange;
+  margin-top: 20px;
+  border: solid 5px;
+  display: none; 
+}*/
+
+#voll {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: orange;
+  margin-top: 20px;
+  border: solid 5px;
+  /*display: none;*/
+}
+
+.item6 { grid-area: ad; }
+.item7 { grid-area: duece; }
+.item8 { grid-area: forceOne; }
+.item9 { grid-area: unforceOne; }
+.item10 { grid-area: forceTwo; }
+.item11 { grid-area: unforceTwo; }
+/*one is for ad side 2 is for duece side  AND 6-11 are BTV but are sperate from the og chart*/
+
+.grid-containerBTV {
+  display: grid;
+  grid-template-areas:
+    'ad ad ad duece duece duece'
+    'forceOne  forceOne forceOne forceTwo forceTwo forceTwo '
+    'unforceOne unforceOne unforceOne unforceTwo unforceTwo unforceTwo';
+  grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-containerBTV > div {
+  background-color: orange;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.logo {
+  width: 400px;
+}
+/*  This is for the OG end part
+*/
+.item12 { grid-area: base; }
+.item13{ grid-area: ap; }
+.item14 { grid-area: pa; }
+.item15 { grid-area: volley; }
+
+.grid-container-end {
+  display: grid;
+  grid-template-areas:
+    'base base base base base base'
+    'ap ap ap pa pa pa'
+    'volley volley volley volley volley volley';
+  grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-container-end > div {
+  background-color: orange;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+/* RETURN OF SERVE 
+RAF - return ad force (thats just an example)
 */
 
-.grid-container2 {
+.item16 { grid-area: ad; }
+.item17{ grid-area: deuce; }
+.item18 { grid-area: forceRAF; }
+.item19 { grid-area: unforceRAU; }
+.item20 { grid-area: forceRDF; }
+.item21{ grid-area: unforcedRDU; }
+.item22 { grid-area: AtD; }
+.item23 { grid-area: DtA; }
+.item24 { grid-area: forceRAtD; }
+.item25{ grid-area: unforcedRAtD; }
+.item26 { grid-area: forcedRDtA; }
+.item27 { grid-area: unforcedRDtA; }
+
+.grid-containerReturn {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-areas:
+    'ad ad ad deuce deuce deuce'
+    'forceRAF forceRAF forceRAF forceRDF forceRDF forceRDF'
+    'unforceRAU unforceRAU unforcedRAU unforcedRDU unforcedRDU unforcedRDU'
+    'AtD AtD AtD DtA DtA DtA'
+    'forceRAtD forceRAtD forceRAtD forcedRDtA forcedRDtA forcedRDtA'
+    'unforcedRAtD unforcedRAtD unforcedRAtD unforcedRDtA unforcedRDtA unforcedRDtA';
+  grid-gap: 10px;
+  background-color: orange;
+  padding: 10px;
+}
+
+.grid-container-Return > div {
   background-color: black;
-  padding: 5px;
-}
-.grid-item2 {
-  background-color: #f4a502;
-  border: 1px solid black;
-  padding: 20px;
-  font-size: 30px;
   text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
 }
-
-.start {
-	border: 5px solid black;
-}
-/*DROP DOWN*/
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}

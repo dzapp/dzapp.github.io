@@ -3501,7 +3501,7 @@ RAF - return ad force (thats just an example)
 
 /*TOP BUTTON*/
 
-#topBTN {
+/*#topBTN {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -3519,19 +3519,39 @@ RAF - return ad force (thats just an example)
 
 #topBTN:hover {
   background-color: black;
-}
+}*/
 
-#allDone {
-  background-color: #ada9a9; 
-  color: black; 
-  border: 2px solid orange;
-  border-radius: 12px;
-font-size: 20px;
+#topBTN {
+background-color: white;
+color: black;
+padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+  cursor: pointer;
+  text-align: center;
 }
 
-#allDone:hover {
+#topBTN:hover {
   background-color: orange;
-  color: #777;
+  color: white;
+}
+
+.MainBTN {
+background-color: white;
+color: black;
+padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-align: center;
 }
