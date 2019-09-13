@@ -852,3 +852,20 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+
+
+		#coach {
+background: orange;
+font-size: 15px;
+width: 300px;
+
+		}
+
+		.footerBTN {
+		align-items: center;
+		background: lightblue;
+		}
+
+		.playerBTN {
+			background: #48ce39;
+		}
