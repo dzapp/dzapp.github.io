@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Popout Menu</title>
+
+
+<script language="JavaScript1.2">
+
+if (document.layers) {n=1;ie=0}
+if (document.all) {n=0;ie=1}
+
+function init() {
+        if (n) tab = document.tabDiv
+		if (n) poptext = document.poptextDiv
+		if (ie) tab = tabDiv.style
+        if (ie) poptext = poptextDiv.style
+}
+
+var tabShow=1;
+
+//Hide-Show Layer
+function hidepoptext() {
+
+        if (tabShow == 1) {
+        	if (n) {
+                tab.visibility = "hide";
+                tab.left = 0;
+                tab.visibility = "show";
+                poptext.visibility = "hide";
+                tabShow = 0;
+                return;
+           	}
+			if (ie) {
+                tab.visibility = "hidden";
+                tab.left = 0;
+                tab.visibility = "visible";
+                poptext.visibility = "hidden";
+                tabShow = 0;
+                return;
+           }
+  }
+                
+        if (tabShow == 0) {
+        	if (n) {
+                tab.visibility = "hide";
+                tab.left = 223;
+                tab.visibility = "show";
+                poptext.visibility = "show";
+                tabShow = 1;
+       			   }
+			if (ie) {
+				tab.visibility = "hidden";
+                tab.left = 223;
+                tab.visibility = "visible";
+                poptext.visibility = "visible";
+                tabShow = 1;
+				}
+}
+}
+
+</script>
+
+
+<style>
+<!--
+#tabdiv {
+        position:absolute;
+        top:20px;
+        left:223px;
+        z-index:2;
+        visibility:show;
+}
+
+#poptextdiv {
+        visibility:show;
+        position:absolute;
+        width:223px;
+        top:10px;
+        left:0px;
+        z-index:0;
+        border-color:#000099;
+        border-width:2px;
+        background-color:#eeeeff;
+        color:black;
+        padding:10 5 10 5;
+        z-index:1;
+        
+}
+
+#maintext {
+        position:absolute;
+        top:10px;
+        left:240px;
+        width:470px;
+        z-index:0;
+
+}-->
+</style>
+
+
+</head>
+
+<body onLoad="init()">
+
+<div ID=tabDiv>
+<a href="javascript:hidepoptext();">
+<img src="tab.gif" width=15 height=164 alt="" border="0">
+</a>
+</div>
+
+<div ID=poptextDiv>
+Pop Out text appears here.  This DIV can contain graphics or text or any other 
+HTML element you would like to include.  By placing several popout menus like
+this down the side of the screen you can make large amounts of information
+available to people only when they need it.  Being able to customize an 
+interface like this is yet another demonstration of the power in DHTML.
+</div>
+
+<div ID=maintext>
+Here's the pop out menu for <STRIKE>Netscape Communicator</STRIKE> both 4.0 browsers.
+This is a very simple example of what can be done with pop-out menus.
+When the Tab is clicked on the Hide or Show script is triggered based
+on wether a variable has been set to "1" or "0".
+</div>
+
+
+</body>
+</html>
